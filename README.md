@@ -2,196 +2,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SANAD - Early Seizure Detection</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANAD | Early Seizure Detection</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    :root {
-        --primary: #0A2A43;
-        --secondary: #1e88a8;
-        --accent: #1abc9c;
-        --light: #ffffff;
-        --gray: #6d8aa3;
-        --bg: #f6faff;
-    }
+:root {
+    --primary:#0A6CFF;
+    --secondary:#0E3B85;
+    --light:#FFFFFF;
+    --bg:#F7FAFF;
+    --text-dark:#1B1B1B;
+    --text-muted:#5A5A5A;
+}
 
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: var(--bg);
-        color: var(--primary);
-        line-height: 1.6;
-    }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
-    header {
-        text-align: center;
-        padding: 40px 20px;
-    }
+/* Header */
+header {
+    text-align: center;
+    padding: 25px;
+    background: var(--light);
+    border-bottom: 1px solid #dfe8ff;
+}
+header img {
+    width: 130px;
+    display: block;
+    margin: 0 auto 8px;
+}
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary);
+}
 
-    header img {
-        width: 160px;
-        margin-bottom: 10px;
-    }
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom right, #0a6cff, #0E3B85);
+    color: var(--light);
+}
+.hero h2 {
+    font-size: 46px;
+    font-weight: 700;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.btn {
+    background: var(--light);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 14px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .3s;
+}
+.btn:hover {
+    background: var(--secondary);
+    color: var(--light);
+}
 
-    .hero {
-        text-align: center;
-        padding: 40px 20px 60px;
-    }
+/* Sections */
+.section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 35px;
+    background: var(--light);
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+.section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary);
+}
 
-    .hero h1 {
-        font-size: 48px;
-        font-weight: 700;
-        color: var(--primary);
-    }
+/* Grid */
+.grid {
+    display: grid;
+    gap: 22px;
+}
+@media (min-width:750px){
+    .grid-2 { grid-template-columns: repeat(2,1fr); }
+    .grid-3 { grid-template-columns: repeat(3,1fr); }
+}
 
-    .hero p {
-        font-size: 20px;
-        color: var(--secondary);
-        margin-bottom: 20px;
-    }
+.card {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #e1ebff;
+}
+.card h4 { color: var(--secondary); font-weight: 600; }
 
-    .btn {
-        background: var(--primary);
-        color: var(--light);
-        padding: 14px 28px;
-        border-radius: 30px;
-        display: inline-block;
-        font-weight: 600;
-        text-decoration: none;
-        transition: 0.3s ease-in-out;
-    }
+/* Contact */
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #cfdfff;
+    margin-bottom: 12px;
+}
+.contact button {
+    width: 100%;
+    background: var(--primary);
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    color: var(--light);
+    font-size: 17px;
+    cursor: pointer;
+    transition:.3s;
+}
+.contact button:hover { background: var(--secondary); }
 
-    .btn:hover {
-        background: var(--secondary);
-    }
-
-    .section {
-        max-width: 1100px;
-        margin: 60px auto;
-        padding: 30px 25px;
-        background: var(--light);
-        border-radius: 18px;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
-    }
-
-    h2 {
-        text-align: center;
-        font-weight: 700;
-        margin-bottom: 25px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 20px;
-        text-align: center;
-    }
-
-    .card {
-        background: var(--bg);
-        padding: 20px;
-        border-radius: 16px;
-        font-weight: 500;
-        color: var(--primary);
-        border-left: 5px solid var(--accent);
-        min-height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    ul.instructions li {
-        margin: 10px 0;
-        color: var(--secondary);
-    }
-
-    footer {
-        text-align: center;
-        padding: 25px;
-        color: var(--gray);
-        font-size: 14px;
-    }
-
-    /* Mobile */
-    @media(max-width: 600px) {
-        .hero h1 { font-size: 32px; }
-        .hero p { font-size: 18px; }
-    }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: var(--light);
+    margin-top: 50px;
+}
 </style>
 </head>
-
 <body>
 
 <header>
-    <img src="logo.png" alt="SANAD Logo">
+    <img src="logo.png" alt="Sanad Logo">
+    <h1>SANAD</h1>
+    <small>Seizure Alert • Protection • Peace of Mind</small>
 </header>
 
 <section class="hero">
-    <h1>SANAD</h1>
-    <p>Early Seizure Detection • Real-Time Voice Alerts</p>
-    <a href="#" class="btn">Download (Coming Soon)</a>
+    <h2>Protecting Lives Through Smart Seizure Detection</h2>
+    <p>AI-powered wearables that monitor and notify caregivers instantly during seizures.</p>
+    <a href="#contact" class="btn">Request Early Access</a>
 </section>
 
-<section class="section">
-    <h2>How It Works</h2>
-    <div class="grid">
-        <div class="card">Detects abnormal heart-rate patterns before a seizure</div>
-        <div class="card">Sends alarm + spoken voice alert</div>
-        <div class="card">Gives step-by-step emergency guidance</div>
-        <div class="card">Warns the user early to prepare safely</div>
+<div class="section">
+    <h3>Mission & Vision</h3>
+    <p><strong>Mission:</strong> To provide reliable early seizure detection for patients and caregivers through advanced wearable technology.</p>
+    <p><strong>Vision:</strong> A world where no seizure goes unnoticed, ensuring safety, response, and peace of mind.</p>
+</div>
+
+<div class="section">
+    <h3>Product Overview</h3>
+    <div class="grid grid-2">
+        <div>
+            <p>SANAD is a small, comfortable wearable device connected to a mobile app. It continuously monitors seizure-related biomarkers, movement patterns, and emergency thresholds using machine learning to trigger instant alerts to family members and healthcare providers.</p>
+        </div>
+        <div>
+            <ul>
+                <li>✔ Real-time monitoring</li>
+                <li>✔ Smart mobile alert system</li>
+                <li>✔ Cloud-based medical analytics</li>
+                <li>✔ Lightweight & child-friendly</li>
+            </ul>
+        </div>
     </div>
-</section>
+</div>
 
-<section class="section">
-    <h2>Features</h2>
-    <div class="grid">
-        <div class="card">Smartwatch + mobile integration</div>
-        <div class="card">AI-powered real-time alerts</div>
-        <div class="card">Clear emergency voice instructions</div>
-        <div class="card">Safe • Private • Easy to use</div>
+<div class="section">
+    <h3>Key Features</h3>
+    <div class="grid grid-3">
+        <div class="card"><h4>24/7 Monitoring</h4><p>Continuous detection with medical-grade accuracy.</p></div>
+        <div class="card"><h4>Emergency Alerts</h4><p>Instant notifications sent to caregivers, parents & doctors.</p></div>
+        <div class="card"><h4>AI-Driven Analytics</h4><p>Personalized seizure prediction learning and tracking.</p></div>
     </div>
-</section>
+</div>
 
-<section class="section">
-    <h2>For Families & Caregivers</h2>
-    <ul class="instructions">
-        <li>“Attention! Someone is about to have a seizure.”</li>
-        <li>“Stay calm and keep others calm.”</li>
-        <li>“Clear the area to prevent injury.”</li>
-        <li>“Help the person lie or sit safely if possible.”</li>
-        <li>“Do not hold or restrict movement.”</li>
-        <li>“Remove hazards such as sharp objects.”</li>
-        <li>“Call medical help if needed.”</li>
-    </ul>
-</section>
+<div class="section">
+    <h3>Team</h3>
+    <div class="grid grid-3">
+        <div class="card"><h4>Biomedical Engineers</h4><p>Device research & biosignal integration</p></div>
+        <div class="card"><h4>AI & Software Developers</h4><p>Algorithm design and mobile app development</p></div>
+        <div class="card"><h4>Medical Advisors</h4><p>Neurologists and clinical professionals</p></div>
+    </div>
+</div>
 
-<section class="section">
-    <h2>About Sanad</h2>
-    <p style="text-align:center; max-width:850px; margin:auto; color:var(--secondary); font-size:17px;">
-        Our mission is to protect and support individuals living with seizure disorders by using
-        advanced biometric technology. Sanad analyzes heart-rate signals to detect early
-        pre-seizure patterns and alerts both the user and nearby people in real time.
-    </p>
-</section>
-
-<section class="section">
-    <h2>Contact Us</h2>
-    <p style="text-align:center; margin-bottom:10px;">📩 support@sanadapp.com</p>
-    <form style="text-align:center;">
-        <input type="email" placeholder="Enter your email" required
-        style="padding:10px; width:260px; border-radius:8px; border:1px solid var(--gray);">
-        <button class="btn" style="border:none; margin-left:8px;">Send</button>
+<div class="section" id="contact">
+    <h3>Contact Us</h3>
+    <form class="contact">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
     </form>
-</section>
+</div>
 
 <footer>
-    © 2025 SANAD — All Rights Reserved
+    © 2025 SANAD | All Rights Reserved
 </footer>
 
 </body>
 </html>
-
