@@ -75,20 +75,20 @@
                 <div class="col card features">
                     <h2>App Features</h2>
                     <ul style="margin-top:12px;">
-                        <li> $1 — detects abnormal heart activity.</li>
-                        <li> $1 — uses motion and vitals analysis to identify seizure events.</li>
-                        <li> $1 — immediately notifies trusted contacts when a critical event is detected.</li>
-                        <li> $1 — shows clear, step-by-step guidance for what to do during a seizure.</li>
+                        <li>🔵✓   — detects abnormal heart activity.</li>
+                        <li>🔵✓   — uses motion and vitals analysis to identify seizure events.</li>
+                        <li>🔵✓   — immediately notifies trusted contacts when a critical event is detected.</li>
+                        <li>🔵✓   — shows clear, step-by-step guidance for what to do during a seizure.</li>
                     </ul>
                 </div>
 
                 <div class="col card">
                     <h2>Why Choose SANAD?</h2>
                     <ul style="margin-top:12px; list-style:none; padding:0;">
-                        <li style="padding:8px 0;"> $1 — runs in the background without needing your phone.</li>
-                        <li style="padding:8px 0;"> $1 — reduces response time by notifying caregivers instantly.</li>
-                        <li style="padding:8px 0;"> $1 — practical instructions reduce uncertainty during emergencies.</li>
-                        <li style="padding:8px 0;"> $1 — works locally on-device to preserve personal data.</li>
+                        <li style="padding:8px 0;">🔵✓   — runs in the background without needing your phone.</li>
+                        <li style="padding:8px 0;">🔵✓   — reduces response time by notifying caregivers instantly.</li>
+                        <li style="padding:8px 0;">🔵✓   — practical instructions reduce uncertainty during emergencies.</li>
+                        <li style="padding:8px 0;">🔵✓   — works locally on-device to preserve personal data.</li>
                     </ul>
                 </div>
             </section>
@@ -97,11 +97,11 @@
             <section class="card" style="margin-top:18px;">
                 <h2>How It Works</h2>
                 <ul style="list-style:none; color:var(--primary); font-size:16px; line-height:1.7; padding:0;">
-                    <li>$1 SANAD runs quietly in the background.</li>
-                    <li>$1 Heart rate and motion signals are analyzed in real time.</li>
-                    <li>$1 If seizure-like patterns or abnormal heart activity are identified, the app triggers an alarm.</li>
-                    <li>$1 The watch sounds a loud alarm and displays on-watch step-by-step instructions for immediate care.</li>
-                    <li>$1 If the user does not cancel the alarm, selected caregivers receive an alert with location information.</li>
+                    <li>🔵✓  SANAD runs quietly in the background.</li>
+                    <li>🔵✓  Heart rate and motion signals are analyzed in real time.</li>
+                    <li>🔵✓  If seizure-like patterns or abnormal heart activity are identified, the app triggers an alarm.</li>
+                    <li>🔵✓  The watch sounds a loud alarm and displays on-watch step-by-step instructions for immediate care.</li>
+                    <li>🔵✓  If the user does not cancel the alarm, selected caregivers receive an alert with location information.</li>
                 </ul>
             </section>
 
@@ -125,3 +125,7 @@
     </div>
 </body>
 </html>
+
+         
+
+         
