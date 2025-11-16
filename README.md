@@ -85,7 +85,7 @@
 
 <header class="hero">
     <div class="hero-content">
-        <img src="logo.png" alt="Sanad Logo" class="logo">
+        <img src="/mnt/data/257c9e24-39b5-4dc1-abde-cd965310e58c.png" alt="Sanad Logo" class="logo">
         <h1>Sanad</h1>
         <p class="tagline">Early seizure detection. Real-time voice alerts.</p>
         <a href="#" class="btn-download">Download (Coming Soon)</a>
@@ -152,4 +152,5 @@
 
 </body>
 </html>
+
 
